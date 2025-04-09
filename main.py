@@ -2,10 +2,10 @@ import os
 import textwrap
 from PIL import Image, ImageDraw, ImageFont
 import tkinter as tk
-from tkinter import filedialog, messagebox
-from tkinter import ttk
+from tkinter import messagebox
 
-def generate_ghs_label(chemical_name, hazard_symbols, container_size, output_path='ghs_label.png', font_path='arial.ttf'):
+
+def generate_ghs_label(chemical_name: str, hazard_symbols: str, container_size: int, output_path='ghs_label.png', font_path='arial.ttf') -> None:
     width, height = 300, 600
     background_color = "white"
     text_color = "black"
@@ -60,7 +60,8 @@ def generate_ghs_label(chemical_name, hazard_symbols, container_size, output_pat
     except IOError as e:
         print(f"Error: Unable to save image to {output_path}. {e}")
 
-def open_label_creator():
+
+def open_label_creator() -> None:
     def submit():
         name = chem_name_var.get()
         size = size_var.get()
@@ -91,6 +92,7 @@ def open_label_creator():
     tk.Button(root, text="Generate Label", command=submit).pack(pady=10)
 
     root.mainloop()
+
 
 # Run the UI
 if __name__ == '__main__':
