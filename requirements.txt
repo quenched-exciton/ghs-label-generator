@@ -1,3 +1,1 @@
-Package Version
-------- -------
 pillow >= 11.1.0
