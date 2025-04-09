@@ -36,7 +36,7 @@ def generate_ghs_label(chemical_name, hazard_symbols, container_size, output_pat
     draw.line([(10, line_y), (width - 10, line_y)], fill=border_color, width=2)
 
     # Add statement below the line
-    statement_text = "For R&D use only. Property of MacDermid Alpha Electronic Solutions"
+    statement_text = "For R&D use only. Property of YOUR INSTITUTION NAME HERE"
     wrapped_statement = textwrap.fill(statement_text, width=wrap_width)
     statement_y = line_y + 5
     draw.text((10, statement_y), wrapped_statement, fill=text_color, font=font)
